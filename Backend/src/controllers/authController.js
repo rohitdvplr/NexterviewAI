@@ -34,8 +34,8 @@ async function registerUser(req, res) {
 
     res.cookie("token", token,{
         httpOnly: true,
-        sameSite: "lax",
-        secure: false
+        secure: process.env.NODE_ENV === "production",
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     });
     res.status(201).json({ message: "User registered successfully",
         user: {
@@ -66,8 +66,8 @@ async function loginUser(req, res) {
     );
     res.cookie("token", token,{
         httpOnly: true,
-        sameSite: "lax",
-        secure: false
+        secure: process.env.NODE_ENV === "production",
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     });
     res.status(200).json({ message: "User logged in successfully",
         user: {
