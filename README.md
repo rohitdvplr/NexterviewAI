@@ -3,6 +3,7 @@
 > AI-powered Interview Preparation Platform built with the MERN Stack.
 
 Nexterview AI helps candidates prepare for interviews by analyzing their resume against a Job Description using AI. It generates ATS insights, personalized interview questions, skill gap analysis, resume feedback, and a preparation roadmap.
+LIVE DEMO - https://nexterview-ai.vercel.app/
 
 ---
 
